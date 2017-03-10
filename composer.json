@@ -1,0 +1,31 @@
+{
+  "name": "friendsofvictoire/video-widget",
+  "type": "symfony-bundle",
+  "description": "Victoire DCMS Video widget",
+  "keywords": [
+    "CMS",
+    "Victoire",
+    "widget",
+    "FriendsofVictoire",
+    "Video",
+    "Dalymotion",
+    "Youtube",
+    "Vimeo"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name" : "Grandin Anthony",
+      "email": "anthony@troopers.email"
+    }
+  ],
+  "require": {
+    "victoire/victoire": ">=2.0.0"
+  },
+  "autoload": {
+    "psr-0": {
+      "Victoire\\Widget\\VideoBundle": ""
+    }
+  },
+  "target-dir": "Victoire/Widget/VideoBundle"
+}

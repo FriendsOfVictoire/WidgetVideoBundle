@@ -1,7 +1,14 @@
 {% extends 'VictoireCoreBundle:Widget:show.html.twig' %}
 
 {% block content %}
-    {% include 'VictoireWidgetVideoBundle::embed/_'~ video.metadata.type ~'.html.twig' with {
-      "code": video.metadata.code,
-    } %}
+    {% if video.contentType == "remote/video" %}
+        {% include 'VictoireWidgetVideoBundle::embed/_'~ video.metadata.type ~'.html.twig' with {
+          "code": video.metadata.code,
+        } %}
+    {% elseif video.contentType == "video/mp4" or video.contentType == "video/x-matroska" %}
+        {% include 'VictoireWidgetVideoBundle:hosted:_hosted.html.twig' with {
+            "url": video.url,
+            "mimeType": video.contentType
+        } %}
+    {% endif %}
 {% endblock content %}

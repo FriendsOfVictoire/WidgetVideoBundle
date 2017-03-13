@@ -25,9 +25,9 @@ class Video
      * @var string
      *
      * @ORM\ManyToOne(targetEntity="\Victoire\Bundle\MediaBundle\Entity\Media")
-     * @ORM\JoinColumn(name="video_id", referencedColumnName="id", onDelete="CASCADE", nullable=true)
+     * @ORM\JoinColumn(name="media_id", referencedColumnName="id", onDelete="CASCADE", nullable=true)
      */
-    protected $video;
+    protected $media;
 
     /**
      * @var boolean
@@ -66,18 +66,18 @@ class Video
     /**
      * @return string
      */
-    public function getVideo()
+    public function getMedia()
     {
-        return $this->video;
+        return $this->media;
     }
 
     /**
-     * @param string $video
+     * @param string $media
      * @return WidgetVideo
      */
-    public function setVideo($video)
+    public function setMedia($media)
     {
-        $this->video = $video;
+        $this->media = $media;
         return $this;
     }
 

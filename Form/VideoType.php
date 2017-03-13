@@ -18,7 +18,7 @@ class VideoType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add("video", MediaType::class, [
+            ->add("media", MediaType::class, [
                 "label" => "victoire.victoire_video_widget_bundle.form.video.label"
             ])
             ->add("autoplay", CheckboxType::class, [

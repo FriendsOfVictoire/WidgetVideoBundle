@@ -1,9 +1,13 @@
 {% extends 'VictoireCoreBundle:Widget:show.html.twig' %}
 
 {% block content %}
-    {% if video.video.contentType == "remote/video" %}
-        {% include 'VictoireWidgetVideoBundle::embed/_'~ video.video.metadata.type ~'.html.twig' with {
-            "code": video.video.metadata.code,
+
+    {% set mimeType = video.media.contentType %}
+    {% set metadata = video.media.metadata %}
+
+    {% if mimeType == "remote/video" %}
+        {% include 'VictoireWidgetVideoBundle::embed/_'~ metadata.type ~'.html.twig' with {
+            "code": metadata.code,
             "autoPlay": video.autoPlay,
             "controls": video.controls,
             "playInLoop": video.playInLoop,
@@ -11,10 +15,10 @@
             "width": video.width ? video.width : null,
             "height": video.height ? video.height : null,
         } %}
-    {% elseif video.video.contentType == "video/mp4" or video.video.contentType == "video/ogg" or video.video.contentType == "video/webm" %}
+    {% elseif mimeType == "video/mp4" or mimeType == "video/ogg" or mimeType == "video/webm" %}
         {% include 'VictoireWidgetVideoBundle:hosted:_hosted.html.twig' with {
-            "url": video.video.url,
-            "mimeType": video.video.contentType,
+            "url": video.media.url,
+            "mimeType": mimeType,
             "autoPlay": video.autoPlay,
             "controls": video.controls,
             "playInLoop": video.playInLoop,

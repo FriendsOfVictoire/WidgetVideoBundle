@@ -1,0 +1,7 @@
+{% extends 'VictoireCoreBundle:Widget:show.html.twig' %}
+
+{% block content %}
+    {% include 'VictoireWidgetVideoBundle::embed/_'~ video.metadata.type ~'.html.twig' with {
+      "code": video.metadata.code,
+    } %}
+{% endblock content %}

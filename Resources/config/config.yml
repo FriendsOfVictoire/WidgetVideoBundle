@@ -1,0 +1,11 @@
+victoire_core:
+    widgets:
+        Video:
+            class: "Victoire\\Widget\\VideoBundle\\Entity\\WidgetVideo"
+            name: Video
+
+jms_translation:
+    configs:
+        victoire_video_bundle:
+            dirs: ["@VictoireVideoBundle"]
+            output_dir: "@VictoireVideoBundle/Resources/translations"

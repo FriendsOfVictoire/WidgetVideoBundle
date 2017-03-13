@@ -24,58 +24,38 @@ class WidgetVideo extends Widget
     private $video;
 
     /**
-     * @var string
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $remoteVideoCode;
-
-    /**
-     * @var string
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $remoteVideoHost;
-
-    /**
-     * @var string
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $url;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="alt", type="string", length=255, nullable=true)
-     * @VIC\ReceiverProperty("textable")
-     */
-    private $alt;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="legend", type="string", length=255, nullable=true)
-     * @VIC\ReceiverProperty("textable")
-     */
-    private $legend;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="title", type="string", length=255, nullable=true)
-     * @VIC\ReceiverProperty("textable")
-     */
-    private $title;
-
-    /**
      * @var boolean
-     * @ORM\Column(name="video_hosted", type="boolean")
-     */
-    private $videoHosted = true;
-
-    /**
-     * @var boolean
-     * @ORM\Column(name="auto_play", type="boolean")
+     * @ORM\Column(name="auto_play", type="boolean", nullable=true)
      */
     private $autoPlay = false;
+
+    /**
+     * @var bool
+     * @ORM\Column(name="play_in_loop", type="boolean", nullable=true)
+     */
+    private $playInLoop = false;
+
+    /**
+     * @var bool
+     * @ORM\Column(name="responsive", type="boolean", nullable=true)
+     */
+    private $responsive = false;
+
+    /**
+     * @ORM\Column(name="width", type="string", nullable=true)
+     */
+    private $width;
+
+    /**
+     * @ORM\Column(name="height", type="string", nullable=true)
+     */
+    private $height;
+
+    /**
+     * @var bool
+     * @ORM\Column(name="controls", type="boolean", nullable=true)
+     */
+    private $controls = false;
 
     /**
      * @return string
@@ -96,132 +76,6 @@ class WidgetVideo extends Widget
     }
 
     /**
-     * @return string
-     */
-    public function getRemoteVideoCode()
-    {
-        return $this->remoteVideoCode;
-    }
-
-    /**
-     * @param string $remoteVideoCode
-     * @return WidgetVideo
-     */
-    public function setRemoteVideoCode($remoteVideoCode)
-    {
-        $this->remoteVideoCode = $remoteVideoCode;
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getRemoteVideoHost()
-    {
-        return $this->remoteVideoHost;
-    }
-
-    /**
-     * @param string $remoteVideoHost
-     * @return WidgetVideo
-     */
-    public function setRemoteVideoHost($remoteVideoHost)
-    {
-        $this->remoteVideoHost = $remoteVideoHost;
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getUrl()
-    {
-        return $this->url;
-    }
-
-    /**
-     * @param string $url
-     * @return WidgetVideo
-     */
-    public function setUrl($url)
-    {
-        $this->url = $url;
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getAlt()
-    {
-        return $this->alt;
-    }
-
-    /**
-     * @param string $alt
-     * @return WidgetVideo
-     */
-    public function setAlt($alt)
-    {
-        $this->alt = $alt;
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getLegend()
-    {
-        return $this->legend;
-    }
-
-    /**
-     * @param string $legend
-     * @return WidgetVideo
-     */
-    public function setLegend($legend)
-    {
-        $this->legend = $legend;
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getTitle()
-    {
-        return $this->title;
-    }
-
-    /**
-     * @param string $title
-     * @return WidgetVideo
-     */
-    public function setTitle($title)
-    {
-        $this->title = $title;
-        return $this;
-    }
-
-    /**
-     * @return bool
-     */
-    public function isVideoHosted()
-    {
-        return $this->videoHosted;
-    }
-
-    /**
-     * @param bool $videoHosted
-     * @return WidgetVideo
-     */
-    public function setVideoHosted($videoHosted)
-    {
-        $this->videoHosted = $videoHosted;
-        return $this;
-    }
-
-    /**
      * @return bool
      */
     public function isAutoPlay()
@@ -236,6 +90,96 @@ class WidgetVideo extends Widget
     public function setAutoPlay($autoPlay)
     {
         $this->autoPlay = $autoPlay;
+        return $this;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isPlayInLoop()
+    {
+        return $this->playInLoop;
+    }
+
+    /**
+     * @param bool $playInLoop
+     * @return WidgetVideo
+     */
+    public function setPlayInLoop($playInLoop)
+    {
+        $this->playInLoop = $playInLoop;
+        return $this;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isResponsive()
+    {
+        return $this->responsive;
+    }
+
+    /**
+     * @param bool $responsive
+     * @return WidgetVideo
+     */
+    public function setResponsive($responsive)
+    {
+        $this->responsive = $responsive;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getWidth()
+    {
+        return $this->width;
+    }
+
+    /**
+     * @param mixed $width
+     * @return WidgetVideo
+     */
+    public function setWidth($width)
+    {
+        $this->width = $width;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getHeight()
+    {
+        return $this->height;
+    }
+
+    /**
+     * @param mixed $height
+     * @return WidgetVideo
+     */
+    public function setHeight($height)
+    {
+        $this->height = $height;
+        return $this;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isControls()
+    {
+        return $this->controls;
+    }
+
+    /**
+     * @param bool $controls
+     * @return WidgetVideo
+     */
+    public function setControls($controls)
+    {
+        $this->controls = $controls;
         return $this;
     }
 }

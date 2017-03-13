@@ -1,3 +1,23 @@
-<video autoplay="true" loop>
+<video
+        {% if autoPlay %}
+            autoplay
+        {% endif %}
+        {% if playInLoop %}
+            loop
+        {% endif %}
+        {% if null != width %}
+            width="{{ width }}"
+        {% endif %}
+        {% if null != height %}
+            height="{{ height }}"
+        {% endif %}
+        {% if responsive %}
+            class="video__responsive"
+        {% endif %}
+        {% if controls %}
+            controls
+        {% endif %}
+>
     <source src="{{ asset(url) }}" type="{{ mimeType }}">
+    <p class="alert alert-warning">{{ 'victoire.widget.video.stream_or_nav.error'|trans }}</p>
 </video>

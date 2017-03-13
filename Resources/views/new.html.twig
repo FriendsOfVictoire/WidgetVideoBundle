@@ -3,6 +3,31 @@
 {% block form_static %}
     <div id="picker-{{ form.mode.vars.data }}" class="vic-tab-pane vic-active">
         {{ form_start(form) }}
+        <div class="row">
+            <div class="col-md-6">
+                {{ form_row(form.video) }}
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+                    {{ form_widget(form.autoplay) }}
+                </div>
+                <div class="row">
+                    {{ form_widget(form.playInLoop) }}
+                </div>
+                <div class="row">
+                    {{ form_widget(form.responsive) }}
+                </div>
+                <div class="row">
+                    {{ form_widget(form.controls) }}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                {{ form_row(form.width) }}
+                {{ form_row(form.height) }}
+            </div>
+        </div>
         {{ form_rest(form) }}
         {{ form_end(form) }}
     </div>

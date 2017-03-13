@@ -3,12 +3,24 @@
 {% block content %}
     {% if video.contentType == "remote/video" %}
         {% include 'VictoireWidgetVideoBundle::embed/_'~ video.metadata.type ~'.html.twig' with {
-          "code": video.metadata.code,
+            "code": video.metadata.code,
+            "autoplay": autoPlay,
+            "playInLoop": playInLoop,
+            "responsive": responsive,
+            "width": width ? width : null,
+            "height": height ? height : null,
         } %}
-    {% elseif video.contentType == "video/mp4" or video.contentType == "video/x-matroska" %}
+    {% elseif video.contentType == "video/mp4" or video.contentType == "video/ogg" or video.contentType == "video/webm" %}
         {% include 'VictoireWidgetVideoBundle:hosted:_hosted.html.twig' with {
             "url": video.url,
-            "mimeType": video.contentType
+            "mimeType": video.contentType,
+            "autoplay": autoPlay,
+            "playInLoop": playInLoop,
+            "responsive": responsive,
+            "width": width ? width : null,
+            "height": height ? height : null,
         } %}
+    {% else %}
+        {{ 'victoire.widget.video.stream.error'|trans }}
     {% endif %}
 {% endblock content %}

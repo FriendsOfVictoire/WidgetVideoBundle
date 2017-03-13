@@ -25,24 +25,32 @@ class WidgetVideoType extends WidgetType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('videoHosted', CheckboxType::class, [
-                'label' => "victoire.victoire_video_widget_bundle.form.video_hosted.label",
-                'required' => true
-            ])
             ->add("video", MediaType::class, [
                 "label" => "victoire.victoire_video_widget_bundle.form.video.label"
             ])
-            ->add("alt", TextType::class, [
-                "label" => "victoire.victoire_video_widget_bundle.form.alt.label"
-            ])
-            ->add("legend", TextType::class, [
-                "label" => "victoire.victoire_video_widget_bundle.form.legend.label"
-            ])
-            ->add("title", TextType::class, [
-                "label" => "victoire.victoire_video_widget_bundle.form.title.label"
-            ])
             ->add("autoplay", CheckboxType::class, [
-                "label" => "victoire.victoire_video_widget_bundle.form.autoplay.label"
+                "label" => "victoire.victoire_video_widget_bundle.form.autoplay.label",
+                "required" => false
+            ])
+            ->add("controls", CheckboxType::class, [
+                "label" => "victoire.victoire_video_widget_bundle.form.controls.label",
+                "required" => false
+            ])
+            ->add("playInLoop", CheckboxType::class, [
+                "label" => "victoire.victoire_video_widget_bundle.form.loop.label",
+                "required" => false
+            ])
+            ->add("responsive", CheckboxType::class, [
+                "label" => "victoire.victoire_video_widget_bundle.form.responsive.label",
+                "required" => false
+            ])
+            ->add("width", TextType::class, [
+                "label" => "victoire.victoire_video_widget_bundle.form.width.label",
+                "required" => false
+            ])
+            ->add("height", TextType::class, [
+                "label" => "victoire.victoire_video_widget_bundle.form.height.label",
+                "required" => false
             ])
         ;
 

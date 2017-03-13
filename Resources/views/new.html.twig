@@ -1,0 +1,13 @@
+{% extends 'VictoireCoreBundle:Widget:new.html.twig' %}
+
+{% block form_static %}
+    <div id="picker-{{ form.mode.vars.data }}" class="vic-tab-pane vic-active">
+        {{ form_start(form) }}
+        {{ form_rest(form) }}
+        {{ form_end(form) }}
+    </div>
+{% endblock form_static %}
+
+{% block form %}
+    {{ parent() }}
+{% endblock form %}

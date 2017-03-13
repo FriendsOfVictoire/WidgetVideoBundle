@@ -5,27 +5,27 @@
         {{ form_start(form) }}
         <div class="row">
             <div class="col-md-6">
-                {{ form_row(form.video) }}
+                {{ form_row(form.video.video) }}
             </div>
             <div class="col-md-6">
                 <div class="row">
-                    {{ form_widget(form.autoplay) }}
+                    {{ form_widget(form.video.autoplay) }}
                 </div>
                 <div class="row">
-                    {{ form_widget(form.playInLoop) }}
+                    {{ form_widget(form.video.playInLoop) }}
                 </div>
                 <div class="row">
-                    {{ form_widget(form.responsive) }}
+                    {{ form_widget(form.video.responsive) }}
                 </div>
                 <div class="row">
-                    {{ form_widget(form.controls) }}
+                    {{ form_widget(form.video.controls) }}
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-md-6">
-                {{ form_row(form.width) }}
-                {{ form_row(form.height) }}
+                {{ form_row(form.video.width) }}
+                {{ form_row(form.video.height) }}
             </div>
         </div>
         {{ form_rest(form) }}

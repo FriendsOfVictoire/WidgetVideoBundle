@@ -1,24 +1,26 @@
 {% extends 'VictoireCoreBundle:Widget:show.html.twig' %}
 
 {% block content %}
-    {% if video.contentType == "remote/video" %}
-        {% include 'VictoireWidgetVideoBundle::embed/_'~ video.metadata.type ~'.html.twig' with {
-            "code": video.metadata.code,
-            "autoplay": autoPlay,
-            "playInLoop": playInLoop,
-            "responsive": responsive,
-            "width": width ? width : null,
-            "height": height ? height : null,
+    {% if video.video.contentType == "remote/video" %}
+        {% include 'VictoireWidgetVideoBundle::embed/_'~ video.video.metadata.type ~'.html.twig' with {
+            "code": video.video.metadata.code,
+            "autoPlay": video.autoPlay,
+            "controls": video.controls,
+            "playInLoop": video.playInLoop,
+            "responsive": video.responsive,
+            "width": video.width ? video.width : null,
+            "height": video.height ? video.height : null,
         } %}
-    {% elseif video.contentType == "video/mp4" or video.contentType == "video/ogg" or video.contentType == "video/webm" %}
+    {% elseif video.video.contentType == "video/mp4" or video.video.contentType == "video/ogg" or video.video.contentType == "video/webm" %}
         {% include 'VictoireWidgetVideoBundle:hosted:_hosted.html.twig' with {
-            "url": video.url,
-            "mimeType": video.contentType,
-            "autoplay": autoPlay,
-            "playInLoop": playInLoop,
-            "responsive": responsive,
-            "width": width ? width : null,
-            "height": height ? height : null,
+            "url": video.video.url,
+            "mimeType": video.video.contentType,
+            "autoPlay": video.autoPlay,
+            "controls": video.controls,
+            "playInLoop": video.playInLoop,
+            "responsive": video.responsive,
+            "width": video.width ? video.width : null,
+            "height": video.height ? video.height : null,
         } %}
     {% else %}
         {{ 'victoire.widget.video.stream.error'|trans }}

@@ -2,39 +2,39 @@
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
   <file source-language="en" target-language="en" datatype="plaintext" original="not.available">
     <body>
-        <trans-unit>
+        <trans-unit id="1">
             <source>victoire.victoire_video_widget_bundle.form.video.label</source>
             <target>Video</target>
         </trans-unit>
-        <trans-unit>
+        <trans-unit id="2">
             <source>victoire.victoire_video_widget_bundle.form.autoplay.label</source>
             <target>Autoplay</target>
         </trans-unit>
-        <trans-unit>
+        <trans-unit id="3">
             <source>victoire.victoire_video_widget_bundle.form.loop.label</source>
             <target>Loop</target>
         </trans-unit>
-        <trans-unit>
+        <trans-unit id="4">
             <source>victoire.victoire_video_widget_bundle.form.responsive.label</source>
             <target>Adaptive dimension</target>
         </trans-unit>
-        <trans-unit>
+        <trans-unit id="5">
             <source>victoire.victoire_video_widget_bundle.form.width.label</source>
             <target>Width</target>
         </trans-unit>
-        <trans-unit>
+        <trans-unit id="6">
             <source>victoire.victoire_video_widget_bundle.form.height.label</source>
             <target>Height</target>
         </trans-unit>
-        <trans-unit>
+        <trans-unit id="7">
             <source>victoire.victoire_video_widget_bundle.form.controls.label</source>
             <target>Display player controls ?</target>
         </trans-unit>
-        <trans-unit>
+        <trans-unit id="8">
             <source>victoire.widget.video.stream_or_nav.error</source>
             <target>Your browser can't play this video</target>
         </trans-unit>
-        <trans-unit>
+        <trans-unit id="9">
             <source>victoire.widget.video.stream.error</source>
             <target>Wrong video format. This player allow .mp4 but not h264 h265 compression, .ogg, .webm, or link from youtube, daylimotion and vimeo.</target>
         </trans-unit>

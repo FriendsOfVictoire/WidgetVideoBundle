@@ -1,5 +1,5 @@
 <?php
 
 $victoireTestBundles = [
-    new \Victoire\Widget\VideoBundle\VictoireWidgetVideoBundle(),
+    new Victoire\Widget\VideoBundle\VictoireWidgetVideoBundle(),
 ];

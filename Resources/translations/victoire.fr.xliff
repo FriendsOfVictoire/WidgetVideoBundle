@@ -2,39 +2,39 @@
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
   <file source-language="en" target-language="fr" datatype="plaintext" original="not.available">
     <body>
-      <trans-unit>
+      <trans-unit id="1">
           <source>victoire.victoire_video_widget_bundle.form.video.label</source>
           <target>Vidéo</target>
       </trans-unit>
-      <trans-unit>
+      <trans-unit id="2">
           <source>victoire.victoire_video_widget_bundle.form.autoplay.label</source>
           <target>Lecture Automatique</target>
       </trans-unit>
-      <trans-unit>
+      <trans-unit id="3">
           <source>victoire.victoire_video_widget_bundle.form.loop.label</source>
           <target>Répéter la vidéo</target>
       </trans-unit>
-      <trans-unit>
+      <trans-unit id="4">
           <source>victoire.victoire_video_widget_bundle.form.responsive.label</source>
           <target>Adapter le lecteur à la page ?</target>
       </trans-unit>
-      <trans-unit>
+      <trans-unit id="5">
           <source>victoire.victoire_video_widget_bundle.form.width.label</source>
           <target>Largeur du lecteur</target>
       </trans-unit>
-      <trans-unit>
+      <trans-unit id="6">
           <source>victoire.victoire_video_widget_bundle.form.height.label</source>
           <target>Hauteur du lecteur</target>
       </trans-unit>
-      <trans-unit>
+      <trans-unit id="7">
           <source>victoire.victoire_video_widget_bundle.form.controls.label</source>
           <target>Afficher les controles du lecteur ?</target>
       </trans-unit>
-      <trans-unit>
+      <trans-unit id="8">
           <source>victoire.widget.video.stream_or_nav.error</source>
           <target>Votre navigateur semble ne pas être capable de lire ce contenu</target>
       </trans-unit>
-      <trans-unit>
+      <trans-unit id="9">
           <source>victoire.widget.video.stream.error</source>
           <target>Format de la vidéo incorrect. Format acccepter .mp4 sauf h264 h265, .ogg, .webm, ou lien youtube, daylimotion et vimeo.</target>
       </trans-unit>

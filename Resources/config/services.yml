@@ -1,16 +1,16 @@
 services:
     victoire_core.widget_video_content_resolver:
-        class: Victoire\Widget\VideoBundle\Resolver\WidgetVideoContentResolver
+        class: 'Victoire\Widget\VideoBundle\Resolver\WidgetVideoContentResolver'
         arguments:
-            - @victoire_media.media_handlers.remote_video
+            - '@victoire_media.media_handlers.remote_video'
         tags:
             - { name: victoire_widget.widget_content_resolver, alias: Video }
     #alias to the entity
     victoire.widget.video:
-        class: Victoire\Widget\VideoBundle\Entity\WidgetVideo
+        class: 'Victoire\Widget\VideoBundle\Entity\WidgetVideo'
     #alias to the form
     victoire.widget.form.video:
-        class: Victoire\Widget\VideoBundle\Form\WidgetVideoType
+        class: 'Victoire\Widget\VideoBundle\Form\WidgetVideoType'
         tags:
             - { name: form.type }
 

@@ -24,7 +24,7 @@ Do not forget to add the bundle in your AppKernel !
         {
             $bundles = array(
                 ...
-                new Victoire\Widget\TitleBundle\VictoireWidgetVideoBundle(),
+                new Victoire\Widget\VideoBundle\VictoireWidgetVideoBundle(),
             );
 
             return $bundles;
